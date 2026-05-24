@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
-import { getToolsByCategory, getTrendingTools } from "@/lib/tools";
-import { ToolCard } from "@/components/ToolCard";
-import { UploadZone } from "@/components/tools/UploadZone";
-import { AnimatedCounter } from "@/components/AnimatedCounter";
-import { useFileContext } from "@/contexts/FileContext";
+import { getToolsByCategory, getTrendingTools } from "../lib/tools";
+import { ToolCard } from "../components/ToolCard";
+import { UploadZone } from "../components/tools/UploadZone";
+import { AnimatedCounter } from "../components/AnimatedCounter";
+import { useFileContext } from "../contexts/FileContext";
 import { useLocation } from "wouter";
 import { Shield, Zap, Gift, Search } from "lucide-react";
 import { useState } from "react";
-import { Input } from "@/components/ui/input";
+import { Input } from "../components/ui/input";
 
 export default function Home() {
   const { setPendingFiles } = useFileContext();

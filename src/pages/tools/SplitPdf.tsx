@@ -1,17 +1,17 @@
 import { useState, useEffect } from "react";
-import { useFileContext } from "@/contexts/FileContext";
-import { getToolByHref } from "@/lib/tools";
-import { ToolPageLayout } from "@/components/tools/ToolPageLayout";
-import { UploadZone } from "@/components/tools/UploadZone";
-import { ProcessButton } from "@/components/tools/ProcessButton";
-import { DownloadResult } from "@/components/tools/DownloadResult";
-import { usePdfThumbnails } from "@/hooks/usePdfThumbnails";
-import { zipFiles } from "@/lib/processors/archiveProcessor";
+import { useFileContext } from "../../contexts/FileContext";
+import { getToolByHref } from "../../lib/tools";
+import { ToolPageLayout } from "../../components/tools/ToolPageLayout";
+import { UploadZone } from "../../components/tools/UploadZone";
+import { ProcessButton } from "../../components/tools/ProcessButton";
+import { DownloadResult } from "../../components/tools/DownloadResult";
+import { usePdfThumbnails } from "../../hooks/usePdfThumbnails";
+import { zipFiles } from "../../lib/processors/archiveProcessor";
 import { saveAs } from "file-saver";
-import { useToast } from "@/hooks/use-toast";
+import { useToast } from "../../hooks/use-toast";
 import { motion, AnimatePresence } from "framer-motion";
 import { Loader2, ScissorsLineDashed } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 
 export default function SplitPdf() {
   const tool = getToolByHref("/tools/split-pdf")!;

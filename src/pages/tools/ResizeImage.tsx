@@ -1,17 +1,17 @@
 import { useState, useEffect } from "react";
-import { useFileContext } from "@/contexts/FileContext";
-import { getToolByHref } from "@/lib/tools";
-import { ToolPageLayout } from "@/components/tools/ToolPageLayout";
-import { UploadZone } from "@/components/tools/UploadZone";
-import { ProcessButton } from "@/components/tools/ProcessButton";
-import { DownloadResult } from "@/components/tools/DownloadResult";
-import { ImagePreviewCard } from "@/components/tools/ImagePreviewCard";
+import { useFileContext } from "../../contexts/FileContext";
+import { getToolByHref } from "../../lib/tools";
+import { ToolPageLayout } from "../../components/tools/ToolPageLayout";
+import { UploadZone } from "../../components/tools/UploadZone";
+import { ProcessButton } from "../../components/tools/ProcessButton";
+import { DownloadResult } from "../../components/tools/DownloadResult";
+import { ImagePreviewCard } from "../../components/tools/ImagePreviewCard";
 import { saveAs } from "file-saver";
-import { useToast } from "@/hooks/use-toast";
+import { useToast } from "../../hooks/use-toast";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link2, Link2Off } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { Input } from "../../components/ui/input";
+import { Label } from "../../components/ui/label";
 
 export default function ResizeImage() {
   const tool = getToolByHref("/tools/resize-image")!;

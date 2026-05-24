@@ -1,7 +1,7 @@
 import { Link, useLocation } from "wouter";
 import { Hexagon, Moon, Sun, Menu, Search, X } from "lucide-react";
-import { useTheme } from "@/contexts/ThemeContext";
-import { Button } from "@/components/ui/button";
+import { useTheme } from "../../contexts/ThemeContext";
+import { Button } from "../../components/ui/button";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 

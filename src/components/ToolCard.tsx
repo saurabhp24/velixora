@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { ToolDefinition } from "@/lib/tools";
+import { ToolDefinition } from "../lib/tools";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 

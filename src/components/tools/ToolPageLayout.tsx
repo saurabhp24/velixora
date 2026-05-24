@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "wouter";
 import { ArrowLeft } from "lucide-react";
 import { motion } from "framer-motion";
-import { ToolDefinition } from "@/lib/tools";
-import { AdBanner } from "@/components/AdBanner";
+import { ToolDefinition } from "../../lib/tools";
+import { AdBanner } from "../../components/AdBanner";
 
 interface ToolPageLayoutProps {
   tool: ToolDefinition;

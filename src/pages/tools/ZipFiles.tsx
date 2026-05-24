@@ -1,16 +1,16 @@
 import { useState, useEffect, useCallback } from "react";
-import { useFileContext } from "@/contexts/FileContext";
-import { getToolByHref } from "@/lib/tools";
-import { ToolPageLayout } from "@/components/tools/ToolPageLayout";
-import { ProcessButton } from "@/components/tools/ProcessButton";
-import { DownloadResult } from "@/components/tools/DownloadResult";
+import { useFileContext } from "../../contexts/FileContext";
+import { getToolByHref } from "../../lib/tools";
+import { ToolPageLayout } from "../../components/tools/ToolPageLayout";
+import { ProcessButton } from "../../components/tools/ProcessButton";
+import { DownloadResult } from "../../components/tools/DownloadResult";
 import { saveAs } from "file-saver";
-import { useToast } from "@/hooks/use-toast";
+import { useToast } from "../../hooks/use-toast";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, FileText, FileImage, Archive, FileCode, Music, Video, File, Plus } from "lucide-react";
 import { useDropzone } from "react-dropzone";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { Input } from "../../components/ui/input";
+import { Label } from "../../components/ui/label";
 
 function formatBytes(bytes: number): string {
   if (bytes < 1024) return `${bytes} B`;

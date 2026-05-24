@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
-import { useFileContext } from "@/contexts/FileContext";
-import { getToolByHref } from "@/lib/tools";
-import { ToolPageLayout } from "@/components/tools/ToolPageLayout";
-import { UploadZone } from "@/components/tools/UploadZone";
-import { ProcessButton } from "@/components/tools/ProcessButton";
-import { DownloadResult } from "@/components/tools/DownloadResult";
-import { usePdfThumbnails } from "@/hooks/usePdfThumbnails";
+import { useFileContext } from "../../contexts/FileContext";
+import { getToolByHref } from "../../lib/tools";
+import { ToolPageLayout } from "../../components/tools/ToolPageLayout";
+import { UploadZone } from "../../components/tools/UploadZone";
+import { ProcessButton } from "../../components/tools/ProcessButton";
+import { DownloadResult } from "../../components/tools/DownloadResult";
+import { usePdfThumbnails } from "../../hooks/usePdfThumbnails";
 import { saveAs } from "file-saver";
-import { useToast } from "@/hooks/use-toast";
+import { useToast } from "../../hooks/use-toast";
 import { motion, AnimatePresence } from "framer-motion";
 import { CheckSquare, Square, Loader2, Scissors } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 
 export default function ExtractPages() {
   const tool = getToolByHref("/tools/extract-pages")!;

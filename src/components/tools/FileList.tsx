@@ -1,5 +1,5 @@
 import { FileText, FileImage, FileArchive, File as FileIcon, X, GripVertical } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 

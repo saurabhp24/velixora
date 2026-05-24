@@ -1,19 +1,19 @@
 import { useState, useEffect } from "react";
-import { useFileContext } from "@/contexts/FileContext";
-import { getToolByHref } from "@/lib/tools";
-import { ToolPageLayout } from "@/components/tools/ToolPageLayout";
-import { UploadZone } from "@/components/tools/UploadZone";
-import { ProcessButton } from "@/components/tools/ProcessButton";
-import { DownloadResult } from "@/components/tools/DownloadResult";
-import { FileInfoCard } from "@/components/tools/FileInfoCard";
-import { usePdfThumbnails } from "@/hooks/usePdfThumbnails";
-import { zipFiles } from "@/lib/processors/archiveProcessor";
+import { useFileContext } from "../../contexts/FileContext";
+import { getToolByHref } from "../../lib/tools";
+import { ToolPageLayout } from "../../components/tools/ToolPageLayout";
+import { UploadZone } from "../../components/tools/UploadZone";
+import { ProcessButton } from "../../components/tools/ProcessButton";
+import { DownloadResult } from "../../components/tools/DownloadResult";
+import { FileInfoCard } from "../../components/tools/FileInfoCard";
+import { usePdfThumbnails } from "../../hooks/usePdfThumbnails";
+import { zipFiles } from "../../lib/processors/archiveProcessor";
 import { saveAs } from "file-saver";
-import { useToast } from "@/hooks/use-toast";
+import { useToast } from "../../hooks/use-toast";
 import { motion, AnimatePresence } from "framer-motion";
 import { Loader2, ImageIcon } from "lucide-react";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../../components/ui/select";
+import { Label } from "../../components/ui/label";
 
 export default function PdfToJpg() {
   const tool = getToolByHref("/tools/pdf-to-jpg")!;

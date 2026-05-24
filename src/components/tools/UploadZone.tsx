@@ -2,8 +2,8 @@ import React, { useCallback, useState } from "react";
 import { useDropzone } from "react-dropzone";
 import { motion, AnimatePresence } from "framer-motion";
 import { Upload, FileType, CheckCircle2, Loader2 } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { ToolDefinition } from "@/lib/tools";
+import { cn } from "../../lib/utils";
+import { ToolDefinition } from "../../lib/tools";
 
 interface UploadZoneProps {
   tool?: ToolDefinition;

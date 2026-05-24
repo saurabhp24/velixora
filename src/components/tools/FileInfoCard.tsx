@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { X, FileText, FileImage, Archive, File } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 
 function formatBytes(bytes: number): string {
   if (bytes < 1024) return `${bytes} B`;

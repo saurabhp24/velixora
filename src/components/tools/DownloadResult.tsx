@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "../../components/ui/button";
 import { Download, CheckCircle, RefreshCw } from "lucide-react";
 import { motion } from "framer-motion";
 

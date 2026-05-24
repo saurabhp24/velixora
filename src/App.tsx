@@ -1,37 +1,37 @@
 import { Switch, Route, Router as WouterRouter } from "wouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Toaster } from "@/components/ui/toaster";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { ThemeProvider } from "@/contexts/ThemeContext";
-import { FileProvider } from "@/contexts/FileContext";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import Home from "@/pages/Home";
-import NotFound from "@/pages/not-found";
+import { Toaster } from "./components/ui/toaster";
+import { TooltipProvider } from "./components/ui/tooltip";
+import { ThemeProvider } from "./contexts/ThemeContext";
+import { FileProvider } from "./contexts/FileContext";
+import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
+import Home from "./pages/Home";
+import NotFound from "./pages/not-found";
 import { AnimatePresence } from "framer-motion";
 import { useEffect } from "react";
 import Lenis from '@studio-freight/lenis';
 
-import MergePdf from "@/pages/tools/MergePdf";
-import SplitPdf from "@/pages/tools/SplitPdf";
-import CompressPdf from "@/pages/tools/CompressPdf";
-import RotatePdf from "@/pages/tools/RotatePdf";
-import DeletePages from "@/pages/tools/DeletePages";
-import RearrangePages from "@/pages/tools/RearrangePages";
-import ExtractPages from "@/pages/tools/ExtractPages";
-import ProtectPdf from "@/pages/tools/ProtectPdf";
-import UnlockPdf from "@/pages/tools/UnlockPdf";
-import WatermarkPdf from "@/pages/tools/WatermarkPdf";
-import PageNumbers from "@/pages/tools/PageNumbers";
-import CompressImage from "@/pages/tools/CompressImage";
-import ConvertImage from "@/pages/tools/ConvertImage";
-import ResizeImage from "@/pages/tools/ResizeImage";
-import ZipFiles from "@/pages/tools/ZipFiles";
-import UnzipFiles from "@/pages/tools/UnzipFiles";
-import JpgToPdf from "@/pages/tools/JpgToPdf";
-import PdfToJpg from "@/pages/tools/PdfToJpg";
-import WordToPdf from "@/pages/tools/WordToPdf";
-import PdfToWord from "@/pages/tools/PdfToWord";
+import MergePdf from "./pages/tools/MergePdf";
+import SplitPdf from "./pages/tools/SplitPdf";
+import CompressPdf from "./pages/tools/CompressPdf";
+import RotatePdf from "./pages/tools/RotatePdf";
+import DeletePages from "./pages/tools/DeletePages";
+import RearrangePages from "./pages/tools/RearrangePages";
+import ExtractPages from "./pages/tools/ExtractPages";
+import ProtectPdf from "./pages/tools/ProtectPdf";
+import UnlockPdf from "./pages/tools/UnlockPdf";
+import WatermarkPdf from "./pages/tools/WatermarkPdf";
+import PageNumbers from "./pages/tools/PageNumbers";
+import CompressImage from "./pages/tools/CompressImage";
+import ConvertImage from "./pages/tools/ConvertImage";
+import ResizeImage from "./pages/tools/ResizeImage";
+import ZipFiles from "./pages/tools/ZipFiles";
+import UnzipFiles from "./pages/tools/UnzipFiles";
+import JpgToPdf from "./pages/tools/JpgToPdf";
+import PdfToJpg from "./pages/tools/PdfToJpg";
+import WordToPdf from "./pages/tools/WordToPdf";
+import PdfToWord from "./pages/tools/PdfToWord";
 
 const queryClient = new QueryClient();
 
@@ -101,7 +101,7 @@ function App() {
                 <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-purple-500/10 blur-[120px] animate-float-2" />
               </div>
 
-              <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+              <WouterRouter>
                 <Navbar />
                 <main className="flex-grow flex flex-col">
                   <Router />

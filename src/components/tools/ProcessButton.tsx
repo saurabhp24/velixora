@@ -1,8 +1,8 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "../../components/ui/button";
 import { Loader2, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 
 interface ProcessButtonProps {
   onClick: () => void;
