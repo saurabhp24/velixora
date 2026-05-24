@@ -3,7 +3,6 @@ import { Link } from "wouter";
 import { ArrowLeft } from "lucide-react";
 import { motion } from "framer-motion";
 import { ToolDefinition } from "../../lib/tools";
-import { AdBanner } from "../../components/AdBanner";
 
 interface ToolPageLayoutProps {
   tool: ToolDefinition;
@@ -39,10 +38,6 @@ export function ToolPageLayout({ tool, children }: ToolPageLayoutProps) {
 
       <div className="max-w-3xl mx-auto">
         {children}
-        
-        <div className="mt-12">
-          <AdBanner placement="inline" />
-        </div>
       </div>
     </motion.div>
   );

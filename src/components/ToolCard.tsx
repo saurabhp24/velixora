@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { ToolDefinition } from "../lib/tools";
 import { motion } from "framer-motion";
+import { useFileContext } from "../contexts/FileContext";
 import { ArrowRight } from "lucide-react";
 
 interface ToolCardProps {
@@ -10,6 +11,9 @@ interface ToolCardProps {
 
 export function ToolCard({ tool, index = 0 }: ToolCardProps) {
   const Icon = tool.icon;
+  const { toolUsage } = useFileContext();
+  const total = Object.values(toolUsage).reduce((s, v) => s + v, 0);
+  const percent = total > 0 ? Math.round(((toolUsage[tool.id] || 0) / total) * 100) : 0;
 
   return (
     <motion.div
@@ -21,6 +25,7 @@ export function ToolCard({ tool, index = 0 }: ToolCardProps) {
     >
       <Link href={tool.href} className="block h-full">
         <div className="h-full glass-panel rounded-xl p-6 transition-all duration-300 hover:bg-white/5 border border-border/50 hover:border-border group-hover:glow-primary relative overflow-hidden flex flex-col">
+          <div className="absolute right-3 bottom-3 text-[11px] px-2 py-1 rounded-full bg-black/30 text-foreground/90">{percent}%</div>
           
           <div 
             className="absolute -right-12 -top-12 w-32 h-32 rounded-full blur-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"

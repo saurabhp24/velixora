@@ -1,38 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-
 :root {
-  --background: #0b1120;
-  --foreground: #f8fafc;
+  --background: #050816;
+  --foreground: #EAF2FF;
+  --surface: rgba(14, 23, 48, 0.72);
+  --border: rgba(255, 255, 255, 0.08);
+  --primary: #00D4FF;
+  --accent: #8B5CF6;
+  --warm: #FF6B35;
+  --glow: #38BDF8;
 }
 
 body {
   font-family: 'Inter', sans-serif;
-  background: var(--background);
+  background: radial-gradient(circle at top, rgba(0, 212, 255, 0.08), transparent 30%),
+              radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1), transparent 25%),
+              var(--background);
   color: var(--foreground);
   margin: 0;
   padding: 0;
 }
 
 .text-gradient {
-  background: linear-gradient(to right, #F0F4FF, #8B5CF6, #00D4FF);
+  background: linear-gradient(to right, #EAF2FF, var(--accent), var(--primary));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .glass-panel {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(12, 18, 34, 0.72);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .glow-primary {
-  box-shadow: 0 0 40px rgba(79, 110, 247, 0.2);
+  box-shadow: 0 0 40px rgba(0, 212, 255, 0.18);
 }
 
 .glow-accent {
-  box-shadow: 0 0 40px rgba(0, 212, 255, 0.2);
+  box-shadow: 0 0 40px rgba(139, 92, 246, 0.18);
 }

@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Upload, FileType, CheckCircle2, Loader2 } from "lucide-react";
 import { cn } from "../../lib/utils";
 import { ToolDefinition } from "../../lib/tools";
+import { useFileContext } from "../../contexts/FileContext";
 
 interface UploadZoneProps {
   tool?: ToolDefinition;
@@ -27,11 +28,17 @@ export function UploadZone({
   const multiple = tool?.multiple ?? (maxFiles !== 1);
   const acceptedTypes = accept || (tool?.accept ? { [tool.accept]: [] } : undefined);
 
+  const { incrementFilesProcessed, recordToolUsage } = useFileContext();
+
   const onDrop = useCallback((acceptedFiles: File[]) => {
     if (acceptedFiles.length > 0) {
+      incrementFilesProcessed(acceptedFiles.length);
+      if (tool?.id) {
+        recordToolUsage(tool.id, acceptedFiles.length);
+      }
       onFilesAccepted(acceptedFiles);
     }
-  }, [onFilesAccepted]);
+  }, [onFilesAccepted, incrementFilesProcessed, recordToolUsage, tool?.id]);
 
   const { getRootProps, getInputProps, isDragActive, isDragReject } = useDropzone({
     onDrop,
