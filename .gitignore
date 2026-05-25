@@ -6,8 +6,12 @@ build/
 .npm/
 .env
 .env.local
+.env.*
 .DS_Store
 Thumbs.db
 coverage/
 .replit
 replit.nix
+.vercel/
+.netlify/
+*.log
