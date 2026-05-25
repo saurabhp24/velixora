@@ -1,0 +1,12 @@
+{
+  "name": "Velixora",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+  "postCreateCommand": "pnpm install",
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "Velixora",
+      "onAutoForward": "openBrowser"
+    }
+  }
+}
