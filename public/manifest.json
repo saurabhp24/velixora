@@ -1,0 +1,25 @@
+{
+  "name": "Velixora — AI Document Workspace",
+  "short_name": "Velixora",
+  "description": "Convert, analyze, and automate documents at lightning speed. AI-native, browser-based, privacy-first.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0f",
+  "theme_color": "#7c3aed",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["productivity", "utilities", "business"],
+  "screenshots": [],
+  "related_applications": []
+}
