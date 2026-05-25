@@ -1,0 +1,13 @@
+node_modules/
+dist/
+build/
+.vite/
+.pnpm-store/
+.npm/
+.env
+.env.local
+.DS_Store
+Thumbs.db
+coverage/
+.replit
+replit.nix
